@@ -37,9 +37,26 @@ function App1() {
 
 // Fim da atividade PROPS
 
+// Atividade STATE
 
+function App2(){
+  const [cliques, setCliques] = useState(0)
 
-export default App1;
+  return(
+    <View style={styles.container}>
+
+      <Button title='OK' onPress={() => {
+        setCliques(cliques + 1)
+      }}/>
+
+      <Text>Quantidade de cliques: {cliques}</Text>
+   </View>
+  )
+}
+
+// Fim da atividade STATE
+
+export default App2;
 
 
 const styles = StyleSheet.create({
